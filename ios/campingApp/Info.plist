@@ -28,9 +28,39 @@
 	<dict>
 	  <!-- Do not change NSAllowsArbitraryLoads to true, or you will risk app rejection! -->
 		<key>NSAllowsArbitraryLoads</key>
-		<false/>
+		<true/>
+		<!-- <false/> -->
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>apis.data.go.kr</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<!-- 추가 -->
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSExceptionMinimumTLSVersion</key>
+				<string>TLSv1.1</string>
+				<!-- 여기까지 -->
+			</dict>
+			<key>13.209.27.220</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<!-- 추가 -->
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSExceptionMinimumTLSVersion</key>
+				<string>TLSv1.1</string>
+				<!-- 여기까지 -->
+			</dict>
+		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
@@ -48,5 +78,12 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<!-- 새로추가 -->
+	<key>NSCameraUsageDescription</key>
+	<string>We need your permission to use the camera</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need your permission to access the photo library</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>We need your permission to save photos</string>
 </dict>
 </plist>
